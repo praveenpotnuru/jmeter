@@ -17,10 +17,12 @@ WORKDIR $JMETER_HOME
 
 EXPOSE 60000
 
-COPY run.sh .
+#COPY run.sh .
 # COPY simple-test1.jmx ./Tests/
 # COPY simple-test2.jmx ./Tests/
 # COPY simple-test3.jmx ./Tests/
-COPY simple.jmx ./Tests/
+#COPY simple.jmx ./Tests/
 
-RUN chmod +x ./run.sh
+
+
+RUN chmod +x run.sh

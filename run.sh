@@ -1,8 +1,8 @@
 #!/bin/bash
 
-jmeter -n -t Tests/$2.jmx -l Results/$2-results.jtl
+jmeter -n -t sample.jmx -l Results/sample-results.jtl
 
-cat Results/$2-results.jtl
+cat Results/sample-results.jtl
 
 curl -X POST -d "$HOSTNAME" $1
 
