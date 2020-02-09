@@ -1,9 +1,8 @@
-#!/bin/bash
-
-jmeter -n -t sample.jmx -l Results/sample-results.jtl
-
-cat Results/sample-results.jtl
-
-#curl -X POST -d "$HOSTNAME" $1
+for i in $(ls -1 Tests | grep jmx)
+do
+    echo "*** Testing a ${i} file"
+    jmeter -n -t Tests/${i} -l Results/${i}-results.jtl
+    cat Results/${i}-results.jtl
+done
 
 sleep 10
